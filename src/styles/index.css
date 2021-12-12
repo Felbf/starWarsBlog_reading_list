@@ -1,3 +1,25 @@
-/* 
-    General Styles
-*/
+ .logo-nav {
+    width: 100px;
+    border:none;
+}
+
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0rem 1rem;
+}
+
+
+@media (min-width: 576px) {
+    .card-group-scroll {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        border-color: red;
+    }
+
+    .card-group-scroll > .card {
+        flex-basis: 35%;
+    }
+}
