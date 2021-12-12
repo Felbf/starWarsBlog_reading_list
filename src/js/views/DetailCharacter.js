@@ -8,16 +8,16 @@ export function DetailCharacter() {
 	const { detailsId } = useParams();
 	return (
 		<div>
-			{store.people.map((character, id) => {
+			{store.people.map((people, id) => {
 				if (id === parseInt(detailsId)) {
 					return (
 						<div className="container">
 							<div className="row my-5">
 								<div className="col-12 col-sm-6">
-									<img src="https://via.placeholder.com/500x300" />
+									<img className="img-detail" src="https://via.placeholder.com/500x300" />
 								</div>
 								<div className="col-12 col-sm-6">
-									<h1>{character.name}</h1>
+									<h1>{people.name}</h1>
 									<p>
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam cursus, mauris nec malesuada
 										commodo, erat ligula blandit sem, ac sagittis metus dolor vel leo. Maecenas mattis nibh vel
@@ -32,27 +32,27 @@ export function DetailCharacter() {
 							<div className="row text-center border-top border-danger pt-3">
 								<div className="col-2 text-danger">
 									<p classNmae="mb-2 font-weight-bold">Name:</p>
-									<span>{character.name}</span>
+									<span>{people.name}</span>
 								</div>
 								<div className="col-2 text-danger">
 									<p classNmae="mb-2 font-weight-bold">Birth Year: </p>
-									<span>{character.birth_year}</span>
+									<span>{people.birth_year}</span>
 								</div>
 								<div className="col-2 text-danger">
 									<p classNmae="mb-2 font-weight-bold">Gender: </p>
-									<span>{character.gender}</span>
+									<span>{people.gender}</span>
 								</div>
 								<div className="col-2 text-danger">
 									<p classNmae="mb-2 font-weight-bold">Height: </p>
-									<span>{character.height}</span>
+									<span>{people.height}</span>
 								</div>
 								<div className="col-2 text-danger">
 									<p classNmae="mb-2 font-weight-bold">Skin Color: </p>
-									<span>{character.skin_color}</span>
+									<span>{people.skin_color}</span>
 								</div>
 								<div className="col-2 text-danger">
 									<p classNmae="mb-2 font-weight-bold">Eye Color: </p>
-									<span>{character.eye_color}</span>
+									<span>{people.eye_color}</span>
 								</div>
 							</div>
 						</div>

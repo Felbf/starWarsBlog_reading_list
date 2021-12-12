@@ -8,12 +8,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 		actions: {
 			loadingData: () => {
-				fetch("https://swapi.dev/api/people/")
+				fetch("https://www.swapi.tech/api/people/")
 					.then(resp => resp.json())
 					.then(data => setStore({ people: data.results }))
 					.catch(error => console.log(error));
 
-				fetch("https://swapi.dev/api/planets/")
+				fetch("https://www.swapi.tech/api/planets/")
 					.then(resp => resp.json())
 					.then(data => setStore({ planets: data.results }))
 					.catch(error => console.log(error));
