@@ -7,6 +7,7 @@ import { useHistory } from "react-router-dom";
 const CardCharacter = () => {
 	const history = useHistory();
 	const { store, actions } = useContext(Context);
+	
 	return (
 		<div className="content">
 			<h1 className="text-danger mx-4">Characters</h1>

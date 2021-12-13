@@ -19,18 +19,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(error => console.log(error));
 			},
 
+			// favorites: name => {
+			// 	let store = getStore();
+			// 	setStore({
+			// 		favorites: store.favorites.concat(name)
+			// 	});
+			// },
+			
 			favorites: name => {
-				let store = getStore();
-				setStore({
-					favorites: store.favorites.concat(name)
-				});
+				if(!getStore().favorites.includes(name)){
+					setStore({ favorites: [...getStore().favorites, name]});
+				}
 			},
-			/*
-			favorites: name => {
-				const store = getStore();
-				setStore({ favorites: [...store.favorites, name] });
-			},
-			*/
+			
 
 			deleteFavorite: index => {
 				const store = getStore();
